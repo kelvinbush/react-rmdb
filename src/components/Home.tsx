@@ -10,13 +10,13 @@ import Spinner from "./Spinner";
 //Hook
 import { useHomeFetch } from "../hooks/useHomeFetch";
 //Image
+// @ts-ignore
 import NoImage from "../images/no_image.jpg";
 import Button from "./Button";
 
-const Home = () => {
+const Home: React.FC = () => {
   const { state, loading, error, setSearchTerm, searchTerm, setIsLoadingMore } =
     useHomeFetch();
-  console.log(state);
   if (error) return <div>Something went wrong...</div>;
   return (
     <>
@@ -27,7 +27,7 @@ const Home = () => {
           text={state.results[0].overview}
         />
       ) : null}
-      <SearchBar searchTerm={setSearchTerm} />
+      <SearchBar setSearchTerm={setSearchTerm} />
       <Grid header={searchTerm ? "Search Result" : "Popular Movies"}>
         {state.results.map((movie) => (
           <Thumb

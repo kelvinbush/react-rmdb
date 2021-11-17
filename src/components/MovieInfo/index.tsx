@@ -1,10 +1,16 @@
 import React from "react";
 import Thumb from "../Thumb";
 import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
+// @ts-ignore
 import NoIMage from "../../images/no_image.jpg";
 import { Content, Text, Wrapper } from "./MovieInfo.styles";
+import { MovieState } from "../../hooks/useMovieFetch";
 
-const MovieInfo = ({ movie }) => (
+type Props = {
+  movie: MovieState;
+};
+
+const MovieInfo: React.FC<Props> = ({ movie }) => (
   <Wrapper backdrop={movie.backdrop_path}>
     <Content>
       <Thumb

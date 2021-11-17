@@ -1,8 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
+// @ts-ignore
 import searchIcon from "../../images/search-icon.svg";
 import { Content, Wrapper } from "./SearchBar.styles";
 
-const SearchBar = ({ searchTerm }) => {
+type Props = {
+  setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
+};
+
+const SearchBar: React.FC<Props> = ({ setSearchTerm }) => {
   const [state, setState] = useState("");
   const initial = useRef(true);
 
@@ -12,10 +17,10 @@ const SearchBar = ({ searchTerm }) => {
       return;
     }
     const timer = setTimeout(() => {
-      searchTerm(state);
+      setSearchTerm(state);
     }, 500);
     return () => clearTimeout(timer);
-  }, [searchTerm, state]);
+  }, [setSearchTerm, state]);
 
   return (
     <Wrapper>
