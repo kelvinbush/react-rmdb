@@ -1,7 +1,6 @@
 import React from "react";
 //config
-
-import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from "../config";
+import { BACKDROP_SIZE, IMAGE_BASE_URL, POSTER_SIZE } from "../config";
 //components
 import HeroImage from "./HeroImage";
 import SearchBar from "./SearchBar";

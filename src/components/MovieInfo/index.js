@@ -2,7 +2,7 @@ import React from "react";
 import Thumb from "../Thumb";
 import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
 import NoIMage from "../../images/no_image.jpg";
-import { Wrapper, Content, Text } from "./MovieInfo.styles";
+import { Content, Text, Wrapper } from "./MovieInfo.styles";
 
 const MovieInfo = ({ movie }) => (
   <Wrapper backdrop={movie.backdrop_path}>

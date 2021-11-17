@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import searchIcon from "../../images/search-icon.svg";
-import { Wrapper, Content } from "./SearchBar.styles";
+import { Content, Wrapper } from "./SearchBar.styles";
 
 const SearchBar = ({ searchTerm }) => {
   const [state, setState] = useState("");

@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper, Content } from "./Grid.styles";
+import { Content, Wrapper } from "./Grid.styles";
 
 const Grid = ({ header, children }) => (
   <Wrapper>

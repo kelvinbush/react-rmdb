@@ -4,7 +4,7 @@ import RMDBLogo from "../../images/react-movie-logo.svg";
 import TMBDLogo from "../../images/tmdb_logo.svg";
 import { Link } from "react-router-dom";
 
-import { Wrapper, Content, LogoImg, TMDBLogoImg } from "./Header.styles";
+import { Content, LogoImg, TMDBLogoImg, Wrapper } from "./Header.styles";
 
 const Header = () => (
   <Wrapper>
